@@ -1,0 +1,14 @@
+{
+  "twitter": {
+    "consumer_key": "test",
+    "consumer_secret": "test",
+    "access_token_key": "test",
+    "access_token_secret": "test"
+  },
+  "store_results": false,
+  "display_results": true,
+  "mongo": {
+    "host": "localhost",
+    "port": "27017"
+  }
+}
