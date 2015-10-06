@@ -1,0 +1,21 @@
+{
+  "name": "sentiment_trial",
+  "version": "0.0.1",
+  "description": "a simple test of sentiment analysis tools",
+  "author": "James Barros <james.a.barros@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/JABT-Industries/sentiment_trial/issues"
+ },
+ "repository": {
+   "type": "git",
+   "url": "https://github.com/JABT-Industries/sentiment_trial"
+ },
+ "dependencies": {
+   "assert": "*",
+   "config": "*",
+   "sentiment": "*",
+   "twitter": "*",
+   "mongodb": "*"
+ }
+}
