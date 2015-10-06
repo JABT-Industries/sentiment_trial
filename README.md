@@ -34,3 +34,6 @@ To store results:
 
 Either of the above can work with display_results true or false.
   - when true, results will be displayed on stdout
+  
+TODO: 
+  - modularize sentiment engine, and sample other options
