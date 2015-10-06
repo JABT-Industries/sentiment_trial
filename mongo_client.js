@@ -1,6 +1,6 @@
 var config = require('config') // https://github.com/lorenwest/node-config
 var MongoClient = require('mongodb').MongoClient // https://github.com/mongodb/node-mongodb-native
-var assert = require('assert')
+var assert = require('assert') // https://github.com/defunctzombie/commonjs-assert
 
 var mongoConfig = config.get('mongo')
 

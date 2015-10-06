@@ -1,10 +1,10 @@
 // Extract sentiment from Twitter, based on a keyword search.
-var assert = require('assert')
 
+var assert = require('assert') // https://github.com/defunctzombie/commonjs-assert
 var config = require('config') // https://github.com/lorenwest/node-config
 var sentiment = require('sentiment') // https://github.com/thisandagain/sentiment
 
-// in house requires
+// get our requirements
 twitter = require('./twitter_client.js')
 if (config.get('store_results')){
   db = require('./mongo_client.js')
@@ -13,7 +13,7 @@ if (config.get('store_results')){
 filter = function(err, data){
   assert.equal(err, null)
 
-  //console.log(data)
+  // twitter data is verbose, make a smaller array with ratings
   var withRating = []
   data.statuses.forEach(function(doc){
     doc['rating'] = sentiment(doc['text']);
@@ -21,8 +21,8 @@ filter = function(err, data){
       "_id": doc['id'],
       "text": doc['text'],
       "score": doc['rating'].score,
-      "positive": doc['rating'].positive,
-      "negative": doc['rating'].negative
+      "positive": doc['rating'].positive, // words which it believes have a positive connotation
+      "negative": doc['rating'].negative // words which it believes have a negative connotation
     })
   })
   if (config.get('display_results')){
@@ -40,7 +40,7 @@ filter = function(err, data){
   }
 } // end filter method.
 
-// confirm we got params.
+// confirm we got a keyword to search on. 
 if (process.argv[2] != null) {
   twitter.search(process.argv[2], filter)
 } else {
