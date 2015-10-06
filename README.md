@@ -2,15 +2,14 @@ A simple sentiment analysis tool for twitter posts using existing open source mo
 ~~which certainly wasn't written in 3 hours in the middle of the night so I could have code to submit for an interview~~
 
 Installation:
+```
+git clone https://github.com/JABT-Industries/sentiment_trial.git
+cd sentiment_trial
+npm install 
+```
 
-```
-npm install assert config sentiment twitter
-```
 - If you would like to store your results in mongo (optional) ensure mongodb server and npm are installed
   - download server from https://www.mongodb.org/
-```  
- npm install mongodb
-```
 
 - Copy config/default.json.sample to config/default.json
   - Edit twitter and mongo sections appropriately
