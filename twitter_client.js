@@ -11,7 +11,7 @@ exports.search = function(keyword, callback){
     if (!error) {
       callback(null, tweets)
     } else {
-      err = 'could not connect to twitter : ' + err
+      err = 'could not connect to twitter : ' + error
       callback(err,null)
     }
   })
